@@ -23,6 +23,7 @@ body{
 .container{
     display: flex;
     width: 90vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .panel{
     background-size: cover;
