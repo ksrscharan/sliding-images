@@ -1,0 +1,62 @@
+#panel1{
+    background-image: url('https://cdn.pixabay.com/photo/2021/12/28/04/12/snow-6898585_960_720.jpg');
+}
+#panel2{
+    background-image: url('https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_960_720.jpg');
+}
+#panel3{
+    background-image: url('https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_960_720.jpg');
+}
+#panel4{
+    background-image: url('https://cdn.pixabay.com/photo/2013/04/04/12/34/mountains-100367_960_720.jpg');
+}
+#panel5{
+    background-image: url('https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267_960_720.jpg');
+}
+body{
+    display: flex;
+    /* margin: auto; */
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    flex: 0.5;
+    position: relative;
+    transition: all 700ms ease-in;
+}
+.panel h3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active{
+    flex-grow: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
